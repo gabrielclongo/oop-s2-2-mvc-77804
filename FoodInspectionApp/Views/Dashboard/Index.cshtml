@@ -1,0 +1,39 @@
+﻿@model FoodInspectionApp.Models.DashboardViewModel
+
+<h2>Dashboard</h2>
+
+<form method="get">
+    <label>Town:</label>
+    <select name="town">
+        <option value="">All</option>
+        @foreach (var t in Model.Towns)
+        {
+            <option value="@t" selected="@(t == Model.SelectedTown)">
+                @t
+            </option>
+        }
+    </select>
+
+    <label>Risk:</label>
+    <select name="risk">
+        <option value="">All</option>
+        @foreach (var r in Model.RiskRatings)
+        {
+            <option value="@r" selected="@(r == Model.SelectedRisk)">
+                @r
+            </option>
+        }
+    </select>
+
+    <button type="submit">Filter</button>
+</form>
+
+<hr />
+
+<h3>Results</h3>
+
+<ul>
+    <li>Total Inspections This Month: <strong>@Model.InspectionsThisMonth</strong></li>
+    <li>Failed Inspections: <strong>@Model.FailedInspectionsThisMonth</strong></li>
+    <li>Overdue FollowUps: <strong>@Model.OverdueFollowUps</strong></li>
+</ul>

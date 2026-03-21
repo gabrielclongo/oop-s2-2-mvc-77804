@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".gitinore" />
+  </Folder>
+  <Project Path="FoodInspectionApp.Tests/FoodInspectionApp.Tests.csproj" Id="d3be78d6-7f34-4dc4-974c-d916b876ba18" />
+  <Project Path="FoodInspectionApp/FoodInspectionApp.csproj" />
+</Solution>
