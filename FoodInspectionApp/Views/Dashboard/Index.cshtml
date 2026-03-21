@@ -1,39 +1,70 @@
 ﻿@model FoodInspectionApp.Models.DashboardViewModel
 
-<h2>Dashboard</h2>
+<div class="container mt-4">
 
-<form method="get">
-    <label>Town:</label>
-    <select name="town">
-        <option value="">All</option>
-        @foreach (var t in Model.Towns)
-        {
-            <option value="@t" selected="@(t == Model.SelectedTown)">
-                @t
-            </option>
-        }
-    </select>
+    <h2 class="mb-4">📊 Dashboard</h2>
 
-    <label>Risk:</label>
-    <select name="risk">
-        <option value="">All</option>
-        @foreach (var r in Model.RiskRatings)
-        {
-            <option value="@r" selected="@(r == Model.SelectedRisk)">
-                @r
-            </option>
-        }
-    </select>
+    <!-- CARDS -->
+    <div class="row">
 
-    <button type="submit">Filter</button>
-</form>
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3 shadow">
+                <div class="card-body">
+                    <h5>Total Inspections</h5>
+                    <h2>@Model.TotalInspections</h2>
+                </div>
+            </div>
+        </div>
 
-<hr />
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3 shadow">
+                <div class="card-body">
+                    <h5>Failed Inspections</h5>
+                    <h2>@Model.FailedInspections</h2>
+                </div>
+            </div>
+        </div>
 
-<h3>Results</h3>
+        <div class="col-md-4">
+            <div class="card text-white bg-warning mb-3 shadow">
+                <div class="card-body">
+                    <h5>Overdue FollowUps</h5>
+                    <h2>@Model.OverdueFollowUps</h2>
+                </div>
+            </div>
+        </div>
 
-<ul>
-    <li>Total Inspections This Month: <strong>@Model.InspectionsThisMonth</strong></li>
-    <li>Failed Inspections: <strong>@Model.FailedInspectionsThisMonth</strong></li>
-    <li>Overdue FollowUps: <strong>@Model.OverdueFollowUps</strong></li>
-</ul>
+    </div>
+
+    <!-- FILTER -->
+    <div class="card p-3 shadow mt-4">
+        <form method="get" class="row g-2">
+
+            <div class="col-md-4">
+                <select name="town" class="form-select">
+                    <option value="">All Towns</option>
+                    @foreach (var t in Model.Towns)
+                    {
+                        <option value="@t">@t</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <select name="risk" class="form-select">
+                    <option value="">All Risk Levels</option>
+                    @foreach (var r in Model.RiskRatings)
+                    {
+                        <option value="@r">@r</option>
+                    }
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <button class="btn btn-dark w-100">Filter</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>

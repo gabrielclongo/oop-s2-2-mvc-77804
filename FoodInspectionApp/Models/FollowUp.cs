@@ -1,11 +1,22 @@
-﻿public class FollowUp
+﻿using System;
+using System.ComponentModel.DataAnnotations;
+
+namespace FoodInspectionApp.Models
 {
-    public int Id { get; set; }
+    public class FollowUp
+    {
+        public int Id { get; set; }
 
-    public int InspectionId { get; set; }
-    public Inspection Inspection { get; set; }
+        public int InspectionId { get; set; }
 
-    public DateTime DueDate { get; set; }
-    public string Status { get; set; }
-    public DateTime? ClosedDate { get; set; }
+        
+        public Inspection? Inspection { get; set; }
+
+        public DateTime DueDate { get; set; }
+
+        [Required]
+        public string Status { get; set; } = string.Empty;
+
+        public DateTime? ClosedDate { get; set; }
+    }
 }

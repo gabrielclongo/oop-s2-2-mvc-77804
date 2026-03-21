@@ -1,8 +1,10 @@
-﻿using FoodInspectionApp.Data;
-using FoodInspectionApp.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FoodInspectionApp.Data;
+using FoodInspectionApp.Models;
 
+[Authorize]
 public class FollowUpsController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -16,13 +18,13 @@ public class FollowUpsController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var followUps = _context.FollowUps.Include(f => f.Inspection);
-        return View(await followUps.ToListAsync());
+        _logger.LogInformation("User {User} viewed follow-ups", User.Identity?.Name);
+
+        return View(await _context.FollowUps.ToListAsync());
     }
 
     public IActionResult Create()
     {
-        ViewBag.Inspections = _context.Inspections.ToList();
         return View();
     }
 
@@ -31,25 +33,22 @@ public class FollowUpsController : Controller
     {
         try
         {
-            var inspection = await _context.Inspections.FindAsync(followUp.InspectionId);
-
-            if (inspection != null && followUp.DueDate < inspection.InspectionDate)
+            if (followUp.DueDate < DateTime.Now)
             {
-                _logger.LogWarning("FollowUp with invalid due date for Inspection {InspectionId}", followUp.InspectionId);
+                _logger.LogWarning("FollowUp created with past due date");
             }
 
             _context.Add(followUp);
             await _context.SaveChangesAsync();
 
-            _logger.LogInformation("FollowUp created {FollowUpId} for Inspection {InspectionId} by {User}",
-                followUp.Id, followUp.InspectionId, User.Identity.Name);
+            _logger.LogInformation("FollowUp created for InspectionId {InspectionId}", followUp.InspectionId);
 
             return RedirectToAction(nameof(Index));
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error creating follow-up");
-            return View(followUp);
+            return View("Error");
         }
     }
 }

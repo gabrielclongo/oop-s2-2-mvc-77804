@@ -1,14 +1,24 @@
-﻿public class Inspection
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace FoodInspectionApp.Models
 {
-    public int Id { get; set; }
+    public class Inspection
+    {
+        public int Id { get; set; }
 
-    public int PremisesId { get; set; }
-    public Premises Premises { get; set; }
+        public int PremisesId { get; set; }
 
-    public DateTime InspectionDate { get; set; }
-    public int Score { get; set; }
-    public string Outcome { get; set; }
-    public string Notes { get; set; }
+        public DateTime InspectionDate { get; set; }
 
-    public List<FollowUp> FollowUps { get; set; }
+        public int Score { get; set; }
+
+        public string Outcome { get; set; } = string.Empty;
+
+        public string Notes { get; set; } = string.Empty;
+
+        // 🔥 RELAÇÃO (IMPORTANTE)
+        public Premises? Premises { get; set; }
+
+        public List<FollowUp> FollowUps { get; set; } = new();
+    }
 }

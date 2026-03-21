@@ -1,53 +1,64 @@
-﻿@model IEnumerable<FollowUp>
+﻿@model IEnumerable<FoodInspectionApp.Models.FollowUp>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "FollowUps";
 }
 
-<h1>Index</h1>
+<div class="container mt-4">
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Inspection)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DueDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ClosedDate)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inspection.Id)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DueDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ClosedDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+    <div class="card shadow-lg rounded-3">
+        <div class="card-header bg-dark text-white d-flex justify-content-between">
+            <h4 class="mb-0">Follow Ups</h4>
+            <a asp-action="Create" class="btn btn-success btn-sm">+ New FollowUp</a>
+        </div>
+
+        <div class="card-body">
+
+            <table class="table table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Inspection</th>
+                        <th>Due Date</th>
+                        <th>Status</th>
+                        <th>Closed Date</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.InspectionId</td>
+
+                            <td>@item.DueDate.ToString("dd/MM/yyyy")</td>
+
+                            <td>
+                                @if (item.Status == "Open")
+                                {
+                                    <span class="badge bg-warning text-dark">Open</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">Closed</span>
+                                }
+                            </td>
+
+                            <td>
+                                @(item.ClosedDate.HasValue
+                                                            ? item.ClosedDate.Value.ToString("dd/MM/yyyy")
+                                                            : "-")
+                            </td>
+
+                            <td>
+                                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Edit</a>
+                                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-info">Details</a>
+                                <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

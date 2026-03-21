@@ -1,8 +1,10 @@
-﻿using FoodInspectionApp.Data;
-using FoodInspectionApp.Models;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using FoodInspectionApp.Data;
+using FoodInspectionApp.Models;
 
+[Authorize(Roles = "Admin")]
 public class InspectionsController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -16,13 +18,14 @@ public class InspectionsController : Controller
 
     public async Task<IActionResult> Index()
     {
+        _logger.LogInformation("User {User} accessed inspections list", User.Identity?.Name);
+
         var inspections = _context.Inspections.Include(i => i.Premises);
         return View(await inspections.ToListAsync());
     }
 
     public IActionResult Create()
     {
-        ViewBag.Premises = _context.Premises.ToList();
         return View();
     }
 
@@ -31,43 +34,23 @@ public class InspectionsController : Controller
     {
         try
         {
-            _context.Add(inspection);
-            await _context.SaveChangesAsync();
+            if (ModelState.IsValid)
+            {
+                _context.Add(inspection);
+                await _context.SaveChangesAsync();
 
-            _logger.LogInformation("Inspection created {InspectionId} for Premises {PremisesId} by {User}",
-                inspection.Id, inspection.PremisesId, User.Identity.Name);
+                _logger.LogInformation("Inspection created. PremisesId: {PremisesId}", inspection.PremisesId);
 
-            return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(Index));
+            }
+
+            _logger.LogWarning("Invalid inspection data submitted");
+            return View(inspection);
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Error creating inspection");
-            return View(inspection);
+            return View("Error");
         }
-    }
-
-    public async Task<IActionResult> Delete(int id)
-    {
-        var inspection = await _context.Inspections.FindAsync(id);
-        return View(inspection);
-    }
-
-    [HttpPost, ActionName("Delete")]
-    public async Task<IActionResult> DeleteConfirmed(int id)
-    {
-        var inspection = await _context.Inspections.FindAsync(id);
-
-        if (inspection == null)
-        {
-            _logger.LogWarning("Attempt to delete non-existing Inspection {InspectionId}", id);
-            return NotFound();
-        }
-
-        _context.Inspections.Remove(inspection);
-        await _context.SaveChangesAsync();
-
-        _logger.LogInformation("Inspection deleted {InspectionId} by {User}", id, User.Identity.Name);
-
-        return RedirectToAction(nameof(Index));
     }
 }
