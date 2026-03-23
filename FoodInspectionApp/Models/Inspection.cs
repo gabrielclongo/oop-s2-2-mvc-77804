@@ -16,7 +16,6 @@ namespace FoodInspectionApp.Models
 
         public string Notes { get; set; } = string.Empty;
 
-        // 🔥 RELAÇÃO (IMPORTANTE)
         public Premises? Premises { get; set; }
 
         public List<FollowUp> FollowUps { get; set; } = new();
