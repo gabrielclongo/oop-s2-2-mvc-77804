@@ -690,3 +690,532 @@ FROM "FollowUps" AS "f"
 2026-03-23 02:22:02.434 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
 2026-03-23 02:22:02.461 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 26.6652ms
 2026-03-23 02:22:02.471 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.6439ms
+2026-03-23 02:27:01.524 +00:00 [INF] User profile is available. Using 'C:\Users\gabri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 02:27:02.688 +00:00 [INF] Executed DbCommand (15ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 02:27:02.767 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 02:27:02.772 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 02:27:02.787 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-23 02:27:02.848 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-23 02:27:02.873 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36), @__p_1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."UserId", "a"."RoleId"
+FROM "AspNetUserRoles" AS "a"
+WHERE "a"."UserId" = @__p_0 AND "a"."RoleId" = @__p_1
+LIMIT 1
+2026-03-23 02:27:03.416 +00:00 [INF] Now listening on: https://localhost:7261
+2026-03-23 02:27:03.418 +00:00 [INF] Now listening on: http://localhost:5199
+2026-03-23 02:27:03.510 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-23 02:27:03.512 +00:00 [INF] Hosting environment: Development
+2026-03-23 02:27:03.513 +00:00 [INF] Content root path: C:\Users\gabri\source\repos\FoodInspectionApp\FoodInspectionApp
+2026-03-23 02:27:05.243 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/ - null null
+2026-03-23 02:27:05.558 +00:00 [INF] Executing endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 02:27:05.582 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodInspectionApp.Controllers.HomeController (FoodInspectionApp).
+2026-03-23 02:27:05.600 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:05.750 +00:00 [INF] Executed ViewResult - view Index executed in 153.505ms.
+2026-03-23 02:27:05.755 +00:00 [INF] Executed action FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp) in 168.4788ms
+2026-03-23 02:27:05.758 +00:00 [INF] Executed endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 02:27:05.772 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/ - 200 null text/html; charset=utf-8 550.3969ms
+2026-03-23 02:27:05.780 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:05.801 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 21.0433ms
+2026-03-23 02:27:05.825 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:05.893 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 68.2511ms
+2026-03-23 02:27:10.058 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Identity/Account/Register - null null
+2026-03-23 02:27:10.087 +00:00 [INF] Executing endpoint '/Account/Register'
+2026-03-23 02:27:10.139 +00:00 [INF] Route matched with {page = "/Account/Register", area = "Identity", action = "", controller = ""}. Executing page /Account/Register
+2026-03-23 02:27:10.171 +00:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.RegisterModel.OnGetAsync - ModelState is "Valid"
+2026-03-23 02:27:10.178 +00:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-23 02:27:10.185 +00:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-23 02:27:10.188 +00:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-23 02:27:10.292 +00:00 [INF] Executed page /Account/Register in 149.0481ms
+2026-03-23 02:27:10.297 +00:00 [INF] Executed endpoint '/Account/Register'
+2026-03-23 02:27:10.300 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Identity/Account/Register - 200 null text/html; charset=utf-8 242.0121ms
+2026-03-23 02:27:10.319 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:10.329 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:10.330 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 11.8519ms
+2026-03-23 02:27:10.371 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 42.6625ms
+2026-03-23 02:27:14.769 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Identity/Account/Login - null null
+2026-03-23 02:27:14.795 +00:00 [INF] Executing endpoint '/Account/Login'
+2026-03-23 02:27:14.805 +00:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-23 02:27:14.814 +00:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2026-03-23 02:27:14.824 +00:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-03-23 02:27:14.828 +00:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-23 02:27:14.831 +00:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-23 02:27:14.834 +00:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-23 02:27:14.875 +00:00 [INF] Executed page /Account/Login in 67.095ms
+2026-03-23 02:27:14.880 +00:00 [INF] Executed endpoint '/Account/Login'
+2026-03-23 02:27:14.886 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Identity/Account/Login - 200 null text/html; charset=utf-8 117.7111ms
+2026-03-23 02:27:14.894 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:14.903 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:14.916 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 13.3472ms
+2026-03-23 02:27:14.937 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 43.2193ms
+2026-03-23 02:27:17.214 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7261/Identity/Account/Login - application/x-www-form-urlencoded 261
+2026-03-23 02:27:17.227 +00:00 [INF] Executing endpoint '/Account/Login'
+2026-03-23 02:27:17.231 +00:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-23 02:27:17.258 +00:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2026-03-23 02:27:17.329 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-23 02:27:17.472 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2026-03-23 02:27:17.501 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-03-23 02:27:17.507 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 02:27:17.519 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2026-03-23 02:27:17.530 +00:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-03-23 02:27:17.534 +00:00 [INF] User logged in.
+2026-03-23 02:27:17.537 +00:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2026-03-23 02:27:17.540 +00:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2026-03-23 02:27:17.544 +00:00 [INF] Executed page /Account/Login in 310.5521ms
+2026-03-23 02:27:17.547 +00:00 [INF] Executed endpoint '/Account/Login'
+2026-03-23 02:27:17.554 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7261/Identity/Account/Login - 302 null null 340.0369ms
+2026-03-23 02:27:17.556 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/ - null null
+2026-03-23 02:27:17.577 +00:00 [INF] Executing endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 02:27:17.581 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodInspectionApp.Controllers.HomeController (FoodInspectionApp).
+2026-03-23 02:27:17.586 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:17.593 +00:00 [INF] Executed ViewResult - view Index executed in 7.1136ms.
+2026-03-23 02:27:17.598 +00:00 [INF] Executed action FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp) in 12.1154ms
+2026-03-23 02:27:17.601 +00:00 [INF] Executed endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 02:27:17.605 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/ - 200 null text/html; charset=utf-8 48.9663ms
+2026-03-23 02:27:17.622 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:17.628 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:17.642 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 12.9278ms
+2026-03-23 02:27:17.652 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.5092ms
+2026-03-23 02:27:25.389 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Inspections - null null
+2026-03-23 02:27:25.410 +00:00 [INF] Executing endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:25.418 +00:00 [INF] Route matched with {action = "Index", controller = "Inspections", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller InspectionsController (FoodInspectionApp).
+2026-03-23 02:27:25.475 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+2026-03-23 02:27:25.544 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:25.578 +00:00 [INF] Executed ViewResult - view Index executed in 35.2633ms.
+2026-03-23 02:27:25.593 +00:00 [INF] Executed action InspectionsController.Index (FoodInspectionApp) in 169.7512ms
+2026-03-23 02:27:25.596 +00:00 [INF] Executed endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:25.599 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Inspections - 200 null text/html; charset=utf-8 210.364ms
+2026-03-23 02:27:25.622 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:25.622 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:25.641 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 18.8182ms
+2026-03-23 02:27:25.653 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.1684ms
+2026-03-23 02:27:28.667 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Inspections/Create - null null
+2026-03-23 02:27:28.689 +00:00 [INF] Executing endpoint 'InspectionsController.Create (FoodInspectionApp)'
+2026-03-23 02:27:28.693 +00:00 [INF] Route matched with {action = "Create", controller = "Inspections", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller InspectionsController (FoodInspectionApp).
+2026-03-23 02:27:28.699 +00:00 [INF] Executing ViewResult, running view Create.
+2026-03-23 02:27:28.809 +00:00 [INF] Executed ViewResult - view Create executed in 110.2155ms.
+2026-03-23 02:27:28.813 +00:00 [INF] Executed action InspectionsController.Create (FoodInspectionApp) in 115.4233ms
+2026-03-23 02:27:28.816 +00:00 [INF] Executed endpoint 'InspectionsController.Create (FoodInspectionApp)'
+2026-03-23 02:27:28.819 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Inspections/Create - 200 null text/html; charset=utf-8 152.2734ms
+2026-03-23 02:27:28.840 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:28.850 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 9.576ms
+2026-03-23 02:27:28.850 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:28.884 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 34.1228ms
+2026-03-23 02:27:30.748 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Inspections - null null
+2026-03-23 02:27:30.762 +00:00 [INF] Executing endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:30.766 +00:00 [INF] Route matched with {action = "Index", controller = "Inspections", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller InspectionsController (FoodInspectionApp).
+2026-03-23 02:27:30.775 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+2026-03-23 02:27:30.795 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:30.809 +00:00 [INF] Executed ViewResult - view Index executed in 14.2914ms.
+2026-03-23 02:27:30.818 +00:00 [INF] Executed action InspectionsController.Index (FoodInspectionApp) in 48.2499ms
+2026-03-23 02:27:30.821 +00:00 [INF] Executed endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:30.824 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Inspections - 200 null text/html; charset=utf-8 75.7074ms
+2026-03-23 02:27:30.832 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:30.840 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 8.3564ms
+2026-03-23 02:27:32.074 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Premises - null null
+2026-03-23 02:27:32.093 +00:00 [INF] Executing endpoint 'PremisesController.Index (FoodInspectionApp)'
+2026-03-23 02:27:32.101 +00:00 [INF] Route matched with {action = "Index", controller = "Premises", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PremisesController (FoodInspectionApp).
+2026-03-23 02:27:32.106 +00:00 [INF] User admin@test.com accessed premises
+2026-03-23 02:27:32.116 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 02:27:32.122 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:32.131 +00:00 [INF] Executed ViewResult - view Index executed in 10.0646ms.
+2026-03-23 02:27:32.137 +00:00 [INF] Executed action PremisesController.Index (FoodInspectionApp) in 32.7365ms
+2026-03-23 02:27:32.142 +00:00 [INF] Executed endpoint 'PremisesController.Index (FoodInspectionApp)'
+2026-03-23 02:27:32.146 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Premises - 200 null text/html; charset=utf-8 72.1302ms
+2026-03-23 02:27:32.161 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:32.168 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:32.197 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 29.2177ms
+2026-03-23 02:27:32.214 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 52.9128ms
+2026-03-23 02:27:36.402 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps - null null
+2026-03-23 02:27:36.413 +00:00 [INF] Executing endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:36.420 +00:00 [INF] Route matched with {action = "Index", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 02:27:36.425 +00:00 [INF] User admin@test.com viewed follow-ups
+2026-03-23 02:27:36.433 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "FollowUps" AS "f"
+2026-03-23 02:27:36.454 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:36.469 +00:00 [INF] Executed ViewResult - view Index executed in 15.56ms.
+2026-03-23 02:27:36.474 +00:00 [INF] Executed action FollowUpsController.Index (FoodInspectionApp) in 50.293ms
+2026-03-23 02:27:36.477 +00:00 [INF] Executed endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:36.479 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps - 200 null text/html; charset=utf-8 78.2485ms
+2026-03-23 02:27:36.493 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:36.493 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:36.505 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 11.9532ms
+2026-03-23 02:27:36.518 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 24.9844ms
+2026-03-23 02:27:38.324 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps/Create - null null
+2026-03-23 02:27:38.343 +00:00 [INF] Executing endpoint 'FollowUpsController.Create (FoodInspectionApp)'
+2026-03-23 02:27:38.347 +00:00 [INF] Route matched with {action = "Create", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 02:27:38.351 +00:00 [INF] Executing ViewResult, running view Create.
+2026-03-23 02:27:38.389 +00:00 [INF] Executed ViewResult - view Create executed in 39.6192ms.
+2026-03-23 02:27:38.395 +00:00 [INF] Executed action FollowUpsController.Create (FoodInspectionApp) in 45.8627ms
+2026-03-23 02:27:38.428 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:38.429 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:38.430 +00:00 [INF] Executed endpoint 'FollowUpsController.Create (FoodInspectionApp)'
+2026-03-23 02:27:38.447 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 17.3891ms
+2026-03-23 02:27:38.462 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 33.6192ms
+2026-03-23 02:27:38.463 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps/Create - 200 null text/html; charset=utf-8 138.6556ms
+2026-03-23 02:27:41.056 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps - null null
+2026-03-23 02:27:41.066 +00:00 [INF] Executing endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:41.071 +00:00 [INF] Route matched with {action = "Index", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 02:27:41.074 +00:00 [INF] User admin@test.com viewed follow-ups
+2026-03-23 02:27:41.076 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "FollowUps" AS "f"
+2026-03-23 02:27:41.080 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:41.086 +00:00 [INF] Executed ViewResult - view Index executed in 6.1949ms.
+2026-03-23 02:27:41.090 +00:00 [INF] Executed action FollowUpsController.Index (FoodInspectionApp) in 16.25ms
+2026-03-23 02:27:41.093 +00:00 [INF] Executed endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 02:27:41.098 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps - 200 null text/html; charset=utf-8 42.5428ms
+2026-03-23 02:27:41.116 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:41.122 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 6.7194ms
+2026-03-23 02:27:50.063 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Dashboard - null null
+2026-03-23 02:27:50.073 +00:00 [INF] Executing endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 02:27:50.081 +00:00 [INF] Route matched with {action = "Index", controller = "Dashboard", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String) on controller DashboardController (FoodInspectionApp).
+2026-03-23 02:27:50.091 +00:00 [INF] Dashboard accessed by admin@test.com
+2026-03-23 02:27:50.142 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__now_Month_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE CAST(strftime('%m', "i"."InspectionDate") AS INTEGER) = @__now_Month_0
+2026-03-23 02:27:50.152 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."Outcome" = 'Fail'
+2026-03-23 02:27:50.161 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__now_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @__now_0 AND "f"."Status" = 'Open'
+2026-03-23 02:27:50.174 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 02:27:50.179 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 02:27:50.195 +00:00 [INF] Executed ViewResult - view Index executed in 16.6826ms.
+2026-03-23 02:27:50.199 +00:00 [INF] Executed action DashboardController.Index (FoodInspectionApp) in 114.4538ms
+2026-03-23 02:27:50.206 +00:00 [INF] Executed endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 02:27:50.210 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Dashboard - 200 null text/html; charset=utf-8 147.2988ms
+2026-03-23 02:27:50.224 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 02:27:50.224 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 02:27:50.231 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 7.2449ms
+2026-03-23 02:27:50.254 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.8961ms
+2026-03-23 09:55:04.001 +00:00 [INF] User profile is available. Using 'C:\Users\gabri\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-23 09:55:05.298 +00:00 [INF] Executed DbCommand (18ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 09:55:05.372 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 9)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 09:55:05.377 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 09:55:05.393 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedEmail_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedEmail" = @__normalizedEmail_0
+LIMIT 2
+2026-03-23 09:55:05.440 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedRoleName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedRoleName_0
+LIMIT 2
+2026-03-23 09:55:05.602 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__p_0='?' (Size = 36), @__p_1='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."UserId", "a"."RoleId"
+FROM "AspNetUserRoles" AS "a"
+WHERE "a"."UserId" = @__p_0 AND "a"."RoleId" = @__p_1
+LIMIT 1
+2026-03-23 09:55:06.058 +00:00 [INF] Now listening on: https://localhost:7261
+2026-03-23 09:55:06.060 +00:00 [INF] Now listening on: http://localhost:5199
+2026-03-23 09:55:06.123 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-23 09:55:06.124 +00:00 [INF] Hosting environment: Development
+2026-03-23 09:55:06.125 +00:00 [INF] Content root path: C:\Users\gabri\source\repos\FoodInspectionApp\FoodInspectionApp
+2026-03-23 09:55:10.439 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/ - null null
+2026-03-23 09:55:10.758 +00:00 [INF] Executing endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 09:55:10.780 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodInspectionApp.Controllers.HomeController (FoodInspectionApp).
+2026-03-23 09:55:10.799 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:10.899 +00:00 [INF] Executed ViewResult - view Index executed in 105.9903ms.
+2026-03-23 09:55:10.903 +00:00 [INF] Executed action FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp) in 119.6417ms
+2026-03-23 09:55:10.905 +00:00 [INF] Executed endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 09:55:10.913 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/ - 200 null text/html; charset=utf-8 499.9103ms
+2026-03-23 09:55:10.965 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:10.975 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 10.7604ms
+2026-03-23 09:55:10.995 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/css/site.css - null null
+2026-03-23 09:55:10.996 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:11.005 +00:00 [INF] The file /css/site.css was not modified
+2026-03-23 09:55:11.008 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/css/site.css - 304 null text/css 13.1271ms
+2026-03-23 09:55:11.059 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 63.6255ms
+2026-03-23 09:55:13.963 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Identity/Account/Login - null null
+2026-03-23 09:55:13.975 +00:00 [INF] Executing endpoint '/Account/Login'
+2026-03-23 09:55:13.994 +00:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-23 09:55:14.010 +00:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnGetAsync - ModelState is "Valid"
+2026-03-23 09:55:14.019 +00:00 [INF] AuthenticationScheme: Identity.External signed out.
+2026-03-23 09:55:14.021 +00:00 [INF] Executed handler method OnGetAsync, returned result .
+2026-03-23 09:55:14.024 +00:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2026-03-23 09:55:14.026 +00:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2026-03-23 09:55:14.087 +00:00 [INF] Executed page /Account/Login in 91.6333ms
+2026-03-23 09:55:14.090 +00:00 [INF] Executed endpoint '/Account/Login'
+2026-03-23 09:55:14.092 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Identity/Account/Login - 200 null text/html; charset=utf-8 128.8325ms
+2026-03-23 09:55:14.108 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:14.111 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:14.114 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 6.5962ms
+2026-03-23 09:55:14.138 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 27.5507ms
+2026-03-23 09:55:15.972 +00:00 [INF] Request starting HTTP/2 POST https://localhost:7261/Identity/Account/Login - application/x-www-form-urlencoded 261
+2026-03-23 09:55:15.983 +00:00 [INF] Executing endpoint '/Account/Login'
+2026-03-23 09:55:15.985 +00:00 [INF] Route matched with {page = "/Account/Login", area = "Identity", action = "", controller = ""}. Executing page /Account/Login
+2026-03-23 09:55:16.012 +00:00 [INF] Executing handler method Microsoft.AspNetCore.Identity.UI.V5.Pages.Account.Internal.LoginModel.OnPostAsync - ModelState is "Valid"
+2026-03-23 09:55:16.057 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedUserName_0='?' (Size = 14)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."AccessFailedCount", "a"."ConcurrencyStamp", "a"."Email", "a"."EmailConfirmed", "a"."LockoutEnabled", "a"."LockoutEnd", "a"."NormalizedEmail", "a"."NormalizedUserName", "a"."PasswordHash", "a"."PhoneNumber", "a"."PhoneNumberConfirmed", "a"."SecurityStamp", "a"."TwoFactorEnabled", "a"."UserName"
+FROM "AspNetUsers" AS "a"
+WHERE "a"."NormalizedUserName" = @__normalizedUserName_0
+LIMIT 1
+2026-03-23 09:55:16.143 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__user_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ClaimType", "a"."ClaimValue", "a"."UserId"
+FROM "AspNetUserClaims" AS "a"
+WHERE "a"."UserId" = @__user_Id_0
+2026-03-23 09:55:16.162 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__userId_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a0"."Name"
+FROM "AspNetUserRoles" AS "a"
+INNER JOIN "AspNetRoles" AS "a0" ON "a"."RoleId" = "a0"."Id"
+WHERE "a"."UserId" = @__userId_0
+2026-03-23 09:55:16.166 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__normalizedName_0='?' (Size = 5)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."Id", "a"."ConcurrencyStamp", "a"."Name", "a"."NormalizedName"
+FROM "AspNetRoles" AS "a"
+WHERE "a"."NormalizedName" = @__normalizedName_0
+LIMIT 1
+2026-03-23 09:55:16.173 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__role_Id_0='?' (Size = 36)], CommandType='"Text"', CommandTimeout='30']
+SELECT "a"."ClaimType", "a"."ClaimValue"
+FROM "AspNetRoleClaims" AS "a"
+WHERE "a"."RoleId" = @__role_Id_0
+2026-03-23 09:55:16.180 +00:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-03-23 09:55:16.182 +00:00 [INF] User logged in.
+2026-03-23 09:55:16.183 +00:00 [INF] Executed handler method OnPostAsync, returned result Microsoft.AspNetCore.Mvc.LocalRedirectResult.
+2026-03-23 09:55:16.186 +00:00 [INF] Executing LocalRedirectResult, redirecting to /.
+2026-03-23 09:55:16.188 +00:00 [INF] Executed page /Account/Login in 201.5921ms
+2026-03-23 09:55:16.189 +00:00 [INF] Executed endpoint '/Account/Login'
+2026-03-23 09:55:16.193 +00:00 [INF] Request finished HTTP/2 POST https://localhost:7261/Identity/Account/Login - 302 null null 220.8455ms
+2026-03-23 09:55:16.196 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/ - null null
+2026-03-23 09:55:16.206 +00:00 [INF] Executing endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 09:55:16.208 +00:00 [INF] Route matched with {action = "Index", controller = "Home", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller FoodInspectionApp.Controllers.HomeController (FoodInspectionApp).
+2026-03-23 09:55:16.211 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:16.215 +00:00 [INF] Executed ViewResult - view Index executed in 4.7888ms.
+2026-03-23 09:55:16.217 +00:00 [INF] Executed action FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp) in 7.2372ms
+2026-03-23 09:55:16.219 +00:00 [INF] Executed endpoint 'FoodInspectionApp.Controllers.HomeController.Index (FoodInspectionApp)'
+2026-03-23 09:55:16.222 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/ - 200 null text/html; charset=utf-8 25.8494ms
+2026-03-23 09:55:16.237 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:16.240 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:16.251 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 11.6671ms
+2026-03-23 09:55:16.259 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 22.3692ms
+2026-03-23 09:55:18.090 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Dashboard - null null
+2026-03-23 09:55:18.103 +00:00 [INF] Executing endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:55:18.108 +00:00 [INF] Route matched with {action = "Index", controller = "Dashboard", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String) on controller DashboardController (FoodInspectionApp).
+2026-03-23 09:55:18.114 +00:00 [INF] Dashboard accessed by admin@test.com
+2026-03-23 09:55:18.158 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__now_Month_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE CAST(strftime('%m', "i"."InspectionDate") AS INTEGER) = @__now_Month_0
+2026-03-23 09:55:18.164 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."Outcome" = 'Fail'
+2026-03-23 09:55:18.170 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__now_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @__now_0 AND "f"."Status" = 'Open'
+2026-03-23 09:55:18.180 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 09:55:18.184 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:18.195 +00:00 [INF] Executed ViewResult - view Index executed in 11.7699ms.
+2026-03-23 09:55:18.200 +00:00 [INF] Executed action DashboardController.Index (FoodInspectionApp) in 89.8562ms
+2026-03-23 09:55:18.202 +00:00 [INF] Executed endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:55:18.204 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Dashboard - 200 null text/html; charset=utf-8 113.7749ms
+2026-03-23 09:55:18.211 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:18.215 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:18.223 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 8.2181ms
+2026-03-23 09:55:18.229 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.1917ms
+2026-03-23 09:55:32.316 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Dashboard?town=Dublin&risk=Medium - null null
+2026-03-23 09:55:32.325 +00:00 [INF] Executing endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:55:32.327 +00:00 [INF] Route matched with {action = "Index", controller = "Dashboard", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String) on controller DashboardController (FoodInspectionApp).
+2026-03-23 09:55:32.333 +00:00 [INF] Dashboard accessed by admin@test.com
+2026-03-23 09:55:32.345 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__town_0='?' (Size = 6), @__risk_1='?' (Size = 6), @__now_Month_2='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+WHERE "p"."Town" = @__town_0 AND "p"."RiskRating" = @__risk_1 AND CAST(strftime('%m', "i"."InspectionDate") AS INTEGER) = @__now_Month_2
+2026-03-23 09:55:32.351 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__town_0='?' (Size = 6), @__risk_1='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+WHERE "p"."Town" = @__town_0 AND "p"."RiskRating" = @__risk_1 AND "i"."Outcome" = 'Fail'
+2026-03-23 09:55:32.353 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__now_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @__now_0 AND "f"."Status" = 'Open'
+2026-03-23 09:55:32.357 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 09:55:32.359 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:32.364 +00:00 [INF] Executed ViewResult - view Index executed in 4.9068ms.
+2026-03-23 09:55:32.368 +00:00 [INF] Executed action DashboardController.Index (FoodInspectionApp) in 38.0384ms
+2026-03-23 09:55:32.371 +00:00 [INF] Executed endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:55:32.374 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Dashboard?town=Dublin&risk=Medium - 200 null text/html; charset=utf-8 58.4213ms
+2026-03-23 09:55:32.388 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:32.394 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:32.403 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 8.5402ms
+2026-03-23 09:55:32.406 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.9129ms
+2026-03-23 09:55:34.273 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Premises - null null
+2026-03-23 09:55:34.282 +00:00 [INF] Executing endpoint 'PremisesController.Index (FoodInspectionApp)'
+2026-03-23 09:55:34.285 +00:00 [INF] Route matched with {action = "Index", controller = "Premises", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller PremisesController (FoodInspectionApp).
+2026-03-23 09:55:34.289 +00:00 [INF] User admin@test.com accessed premises
+2026-03-23 09:55:34.294 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 09:55:34.308 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:34.316 +00:00 [INF] Executed ViewResult - view Index executed in 7.5228ms.
+2026-03-23 09:55:34.318 +00:00 [INF] Executed action PremisesController.Index (FoodInspectionApp) in 29.98ms
+2026-03-23 09:55:34.320 +00:00 [INF] Executed endpoint 'PremisesController.Index (FoodInspectionApp)'
+2026-03-23 09:55:34.321 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Premises - 200 null text/html; charset=utf-8 48.6249ms
+2026-03-23 09:55:34.332 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:34.335 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:34.342 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 7.3168ms
+2026-03-23 09:55:34.350 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.0821ms
+2026-03-23 09:55:37.512 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Inspections - null null
+2026-03-23 09:55:37.519 +00:00 [INF] Executing endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:37.523 +00:00 [INF] Route matched with {action = "Index", controller = "Inspections", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller InspectionsController (FoodInspectionApp).
+2026-03-23 09:55:37.538 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "i"."Id", "i"."InspectionDate", "i"."Notes", "i"."Outcome", "i"."PremisesId", "i"."Score", "p"."Id", "p"."Address", "p"."Name", "p"."RiskRating", "p"."Town"
+FROM "Inspections" AS "i"
+INNER JOIN "Premises" AS "p" ON "i"."PremisesId" = "p"."Id"
+2026-03-23 09:55:37.568 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:37.591 +00:00 [INF] Executed ViewResult - view Index executed in 23.4696ms.
+2026-03-23 09:55:37.594 +00:00 [INF] Executed action InspectionsController.Index (FoodInspectionApp) in 68.4428ms
+2026-03-23 09:55:37.595 +00:00 [INF] Executed endpoint 'InspectionsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:37.597 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Inspections - 200 null text/html; charset=utf-8 84.8079ms
+2026-03-23 09:55:37.624 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:37.624 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:37.636 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 12.6789ms
+2026-03-23 09:55:37.645 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.4187ms
+2026-03-23 09:55:41.515 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps - null null
+2026-03-23 09:55:41.523 +00:00 [INF] Executing endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:41.527 +00:00 [INF] Route matched with {action = "Index", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 09:55:41.530 +00:00 [INF] User admin@test.com viewed follow-ups
+2026-03-23 09:55:41.535 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "FollowUps" AS "f"
+2026-03-23 09:55:41.545 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:41.554 +00:00 [INF] Executed ViewResult - view Index executed in 9.6009ms.
+2026-03-23 09:55:41.557 +00:00 [INF] Executed action FollowUpsController.Index (FoodInspectionApp) in 27.6067ms
+2026-03-23 09:55:41.559 +00:00 [INF] Executed endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:41.561 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps - 200 null text/html; charset=utf-8 45.714ms
+2026-03-23 09:55:41.572 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:41.572 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:41.583 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 11.0543ms
+2026-03-23 09:55:41.595 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 23.672ms
+2026-03-23 09:55:44.359 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps/Create - null null
+2026-03-23 09:55:44.366 +00:00 [INF] Executing endpoint 'FollowUpsController.Create (FoodInspectionApp)'
+2026-03-23 09:55:44.369 +00:00 [INF] Route matched with {action = "Create", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 09:55:44.372 +00:00 [INF] Executing ViewResult, running view Create.
+2026-03-23 09:55:44.451 +00:00 [INF] Executed ViewResult - view Create executed in 80.3898ms.
+2026-03-23 09:55:44.454 +00:00 [INF] Executed action FollowUpsController.Create (FoodInspectionApp) in 83.5294ms
+2026-03-23 09:55:44.456 +00:00 [INF] Executed endpoint 'FollowUpsController.Create (FoodInspectionApp)'
+2026-03-23 09:55:44.458 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps/Create - 200 null text/html; charset=utf-8 99.4635ms
+2026-03-23 09:55:44.471 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-03-23 09:55:44.474 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:44.476 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - null null
+2026-03-23 09:55:44.477 +00:00 [INF] The file /lib/jquery-validation/dist/jquery.validate.min.js was not modified
+2026-03-23 09:55:44.481 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 7.0092ms
+2026-03-23 09:55:44.482 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:55:44.484 +00:00 [INF] The file /lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js was not modified
+2026-03-23 09:55:44.485 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/lib/jquery-validation/dist/jquery.validate.min.js - 304 null text/javascript 14.1225ms
+2026-03-23 09:55:44.494 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js - 304 null text/javascript 18.4303ms
+2026-03-23 09:55:44.504 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 21.5582ms
+2026-03-23 09:55:46.702 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/FollowUps - null null
+2026-03-23 09:55:46.708 +00:00 [INF] Executing endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:46.709 +00:00 [INF] Route matched with {action = "Index", controller = "FollowUps", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller FollowUpsController (FoodInspectionApp).
+2026-03-23 09:55:46.712 +00:00 [INF] User admin@test.com viewed follow-ups
+2026-03-23 09:55:46.714 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "f"."Id", "f"."ClosedDate", "f"."DueDate", "f"."InspectionId", "f"."Status"
+FROM "FollowUps" AS "f"
+2026-03-23 09:55:46.717 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:55:46.721 +00:00 [INF] Executed ViewResult - view Index executed in 4.1398ms.
+2026-03-23 09:55:46.723 +00:00 [INF] Executed action FollowUpsController.Index (FoodInspectionApp) in 11.6182ms
+2026-03-23 09:55:46.725 +00:00 [INF] Executed endpoint 'FollowUpsController.Index (FoodInspectionApp)'
+2026-03-23 09:55:46.727 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/FollowUps - 200 null text/html; charset=utf-8 25.6898ms
+2026-03-23 09:55:46.740 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:55:46.744 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 5.1176ms
+2026-03-23 09:56:11.815 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/Dashboard - null null
+2026-03-23 09:56:11.831 +00:00 [INF] Executing endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:56:11.834 +00:00 [INF] Route matched with {action = "Index", controller = "Dashboard", page = "", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String, System.String) on controller DashboardController (FoodInspectionApp).
+2026-03-23 09:56:11.836 +00:00 [INF] Dashboard accessed by admin@test.com
+2026-03-23 09:56:11.838 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__now_Month_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE CAST(strftime('%m', "i"."InspectionDate") AS INTEGER) = @__now_Month_0
+2026-03-23 09:56:11.840 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "Inspections" AS "i"
+WHERE "i"."Outcome" = 'Fail'
+2026-03-23 09:56:11.842 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__now_0='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM "FollowUps" AS "f"
+WHERE "f"."DueDate" < @__now_0 AND "f"."Status" = 'Open'
+2026-03-23 09:56:11.844 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT DISTINCT "p"."Town"
+FROM "Premises" AS "p"
+2026-03-23 09:56:11.846 +00:00 [INF] Executing ViewResult, running view Index.
+2026-03-23 09:56:11.852 +00:00 [INF] Executed ViewResult - view Index executed in 5.731ms.
+2026-03-23 09:56:11.860 +00:00 [INF] Executed action DashboardController.Index (FoodInspectionApp) in 24.5537ms
+2026-03-23 09:56:11.862 +00:00 [INF] Executed endpoint 'DashboardController.Index (FoodInspectionApp)'
+2026-03-23 09:56:11.863 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/Dashboard - 200 null text/html; charset=utf-8 48.1919ms
+2026-03-23 09:56:11.871 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_vs/browserLink - null null
+2026-03-23 09:56:11.872 +00:00 [INF] Request starting HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-23 09:56:11.883 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 11.1545ms
+2026-03-23 09:56:11.896 +00:00 [INF] Request finished HTTP/2 GET https://localhost:7261/_vs/browserLink - 200 null text/javascript; charset=UTF-8 25.3232ms

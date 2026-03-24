@@ -1,47 +1,67 @@
-﻿@model FollowUp
+﻿@model FoodInspectionApp.Models.FollowUp
 
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create FollowUp";
 }
 
 <h1>Create</h1>
 
 <h4>FollowUp</h4>
 <hr />
+
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
+
+            <!-- 🔴 Mostra erros gerais -->
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <!-- ✅ Inspection Dropdown -->
             <div class="form-group">
                 <label asp-for="InspectionId" class="control-label"></label>
-                <select asp-for="InspectionId" class ="form-control" asp-items="ViewBag.InspectionId"></select>
+                <select asp-for="InspectionId"
+                        class="form-control"
+                        asp-items="ViewBag.InspectionId">
+                    <option value="">-- Select Inspection --</option>
+                </select>
+                <span asp-validation-for="InspectionId" class="text-danger"></span>
             </div>
+
+            <!-- ✅ Due Date -->
             <div class="form-group">
                 <label asp-for="DueDate" class="control-label"></label>
-                <input asp-for="DueDate" class="form-control" />
+                <input asp-for="DueDate" type="datetime-local" class="form-control" />
                 <span asp-validation-for="DueDate" class="text-danger"></span>
             </div>
+
+            <!-- ✅ Status -->
             <div class="form-group">
                 <label asp-for="Status" class="control-label"></label>
-                <input asp-for="Status" class="form-control" />
+                <input asp-for="Status" class="form-control" placeholder="e.g. Open, Closed" />
                 <span asp-validation-for="Status" class="text-danger"></span>
             </div>
+
+            <!-- ✅ Closed Date -->
             <div class="form-group">
                 <label asp-for="ClosedDate" class="control-label"></label>
-                <input asp-for="ClosedDate" class="form-control" />
+                <input asp-for="ClosedDate" type="datetime-local" class="form-control" />
                 <span asp-validation-for="ClosedDate" class="text-danger"></span>
             </div>
+
+            <br />
+
+            <!-- ✅ Botão -->
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-secondary">Back</a>
             </div>
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

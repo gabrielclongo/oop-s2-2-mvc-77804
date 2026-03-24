@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using FoodInspectionApp.Data;
 using FoodInspectionApp.Models;
@@ -16,7 +17,6 @@ public class InspectionsController : Controller
         _logger = logger;
     }
 
-    
     public async Task<IActionResult> Index()
     {
         var inspections = _context.Inspections
@@ -25,7 +25,6 @@ public class InspectionsController : Controller
         return View(await inspections.ToListAsync());
     }
 
-   
     public async Task<IActionResult> Details(int? id)
     {
         if (id == null) return NotFound();
@@ -42,13 +41,16 @@ public class InspectionsController : Controller
     
     public IActionResult Create()
     {
+        ViewBag.PremisesId = new SelectList(_context.Premises, "Id", "Id");
         return View();
     }
 
+  
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(Inspection inspection)
     {
-        try
+        if (ModelState.IsValid)
         {
             _context.Add(inspection);
             await _context.SaveChangesAsync();
@@ -57,32 +59,29 @@ public class InspectionsController : Controller
 
             return RedirectToAction(nameof(Index));
         }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error creating inspection");
-            return View("Error");
-        }
+
+        ViewBag.PremisesId = new SelectList(_context.Premises, "Id", "Id", inspection.PremisesId);
+        return View(inspection);
     }
 
-   
     public async Task<IActionResult> Edit(int? id)
     {
         if (id == null) return NotFound();
 
         var inspection = await _context.Inspections.FindAsync(id);
-
         if (inspection == null) return NotFound();
 
+        ViewBag.PremisesId = new SelectList(_context.Premises, "Id", "Id", inspection.PremisesId);
         return View(inspection);
     }
 
-   
     [HttpPost]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Edit(int id, Inspection inspection)
     {
         if (id != inspection.Id) return NotFound();
 
-        try
+        if (ModelState.IsValid)
         {
             _context.Update(inspection);
             await _context.SaveChangesAsync();
@@ -91,14 +90,11 @@ public class InspectionsController : Controller
 
             return RedirectToAction(nameof(Index));
         }
-        catch (Exception ex)
-        {
-            _logger.LogError(ex, "Error updating inspection");
-            return View("Error");
-        }
+
+        ViewBag.PremisesId = new SelectList(_context.Premises, "Id", "Id", inspection.PremisesId);
+        return View(inspection);
     }
 
-    
     public async Task<IActionResult> Delete(int? id)
     {
         if (id == null) return NotFound();
@@ -112,8 +108,8 @@ public class InspectionsController : Controller
         return View(inspection);
     }
 
-    
     [HttpPost, ActionName("Delete")]
+    [ValidateAntiForgeryToken]
     public async Task<IActionResult> DeleteConfirmed(int id)
     {
         var inspection = await _context.Inspections.FindAsync(id);
